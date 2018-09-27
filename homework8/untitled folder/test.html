@@ -1,0 +1,118 @@
+<!--
+<!DOCTYPE HTML>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3db2_p93Rfd1heCsaHsTu7X0GEmjZvWo&libraries=places"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>Travel and Entertainment Search</title>                                       <style>
+
+    .ratings {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: #b1b1b1;
+    overflow: hidden;
+}
+.full-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fde16d;
+    margin-bottom: auto
+}
+.empty-stars:before, .full-stars:before {
+    content:"\2605\2605\2605\2605\2605";
+    font-size: 10px;
+}
+.empty-stars:before {
+    color: white;
+}
+.full-stars:before {
+    color:orange;
+}
+</style>                                                                                                 
+</head>
+<body>
+<div onclick="initMap()">123</div>
+<div id='map'>hahahahh</div>
+<div id='map1'>666</div>
+<div id='map2'>999</div>
+<div id='rating1' class='rating'></div>
+    <p>1</p>
+<a id='website'></a>
+
+<div class="ratings">
+    <div class="empty-stars"></div>
+    <div class="full-stars" id='rate' style="width:100%"></div>
+</div>
+
+<script>
+
+
+
+
+
+function initMap() {
+       
+
+        
+        var service = new google.maps.places.PlacesService(map);
+
+        service.getDetails({
+          placeId: 'ChIJwZVT9ZpZwokRBfO1cTF0MNo'
+        }, function(place, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+           
+            
+              document.getElementById('map1').innerHTML = place.photos.getUrl();
+              document.getElementById('map2').innerHTML = '$'.repeat(place.price_level);
+              document.getElementById('rate').style.width =  place.rating/5*100 + "%";
+              document.getElementById('website').innerHTML = place.website;
+              document.getElementById('website').href = place.website;
+          }
+        });
+      }
+    
+    function rating(stars) {
+
+    document.getElementById('rating1').style.width = "35%";
+}
+</script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #star{
+            border: 1px solid 
+        }
+    </style>
+</head>
+<body>
+
+<h1>fa fa-star</h1>
+
+<i class="fa fa-star"></i>
+<i class="fa fa-star" style="font-size:24px"></i>
+<i class="fa fa-star" style="font-size:36px"></i>
+<i class="fa fa-star" id='star' style="font-size:48px;color:yellow;"></i>
+<br>
+
+<p>Used on a button:</p>
+<button style="font-size:24px">Button <i class="fa fa-star"></i></button>
+
+<p>Unicode:</p>
+<i style="font-size:24px" class="fa">&#xf005;</i>
+
+</body>
+</html> 
+
+

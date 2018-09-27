@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Homework 4</title>
+<script>
+function generateHTML(jsonObj) {
+ELEMENT_NODE = 1;
+root=jsonObj.DocumentElement;
+html_text="<html><head><title>Top Trucking Companies</title></head><body>";
+html_text+="<table border='2'>";
+trucking=jsonObj.Mainline.Table; // an array of trucking comps
+truckingNodeList=trucking.Header; // header 
+html_text+="<tbody>";
+html_text+="<tr>";
+x=380; y=200;
+z=100;
+// output the headers
+headers = truckingNodeList.Data;
+var header_keys = Object.keys(headers); // Data
+for(i=0;i<header_keys.length;i++) {
+header=headers[i];
+html_text+="<th>"+header+"</th>";
+}   
+html_text+="</tr>";
+// output out the values
+rows = jsonObj.Mainline.Table.Row
+for(i=0;i<rows.length;i++) //do for all trucking comp (one per row)
+{
+truckingNodeList=rows[i]; //get properties of a trucking c(an object)
+html_text+="<tr>"; //start a new row of the output table
+var trucking_keys = Object.keys(truckingNodeList); // lists inside every trucking com
+for(j=0;j<trucking_keys.length;j++)
+{
+prop = trucking_keys[j];
+if(trucking_keys[j]=="Logo")
+{//handle images separately
+html_text+="<td><img src='"+ truckingNodeList[prop] +"' width='"+x+"' height='"+y+"'></td>";
+}
+else if(trucking_keys[j]=="Hubs")
+{//handle hubs separately
+html_text+="<td>" + "<ul><li>"+ truckingNodeList[prop].Hub[0].bold() +"</li>"+ "<br />" + "<li>" + truckingNodeList[prop].Hub[1] + "</li></ul>" +"</td>";
+}
+else if(trucking_keys[j]=="HomePage")
+{
+html_text+="<td>" + '<a href="' + truckingNodeList[prop] + '"</a>' + truckingNodeList[prop] + "</td>"
+}
+else {
+html_text+="<td>"+ truckingNodeList[prop] +"</td>";
+}
+}
+html_text+="</tr>";
+}
+html_text+="</tbody>";
+html_text+="</table>";
+html_text+="</body></html>"; }    
+
+    
+    
+function viewJSON(what){
+var URL = what.URL.value;
+function loadJSON(url) {
+if (window.XMLHttpRequest)
+{// code for IE7+, Firefox, Chrome, Opera, Safari
+xmlhttp=new XMLHttpRequest();
+} else {// code for IE6, IE5
+xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); }
+xmlhttp.open("GET",url,false);
+xmlhttp.send();
+jsonObj= JSON.parse(xmlhttp.responseText);
+return jsonObj; }
+jsonObj = loadJSON(URL);
+if (window.ActiveXObject) //if IE, simply execute script (due to async prop).
+{ if (jsonObj.parseError.errorCode != 0) {
+var myErr = jsonObj.parseError;
+generateError(jsonObj);
+hWin = window.open("", "Error", "height=300,width=340");
+hWin.document.write(html_text);
+} else { generateHTML(jsonObj);
+hWin = window.open("", "Assignment4", "height=840,width=1095");
+hWin.document.write(html_text); }
+} else //else if FF, execute script once JSON object has loaded
+{ jsonObj.onload=generateHTML(jsonObj);
+hWin = window.open("", "Assignment4", "height=840,width=1095");
+hWin.document.write(html_text); } 
+hWin.document.close(); 
+}    
+
+</script>
+<style>
+body{
+    text-align: center;
+     margin-top: 120px;
+} 
+h1{
+    font-size: 1.1em;
+}
+form{
+    text-align: center;
+   
+}
+input{
+    margin: 8px;
+} 
+</style>   
+</head>
+<body>
+<h1>Enter URL for Trucking List JSON File</h1>
+<form name="myform" method="POST" id="location">
+<input type="text" name="URL" maxlength="255" size="21"
+value="truckinglist.json" />
+<br />
+<input type="button" name="submit" value="Submit Query"
+onclick="viewJSON(this.form)" />
+</form>   
+</body>
+
+</html>
+

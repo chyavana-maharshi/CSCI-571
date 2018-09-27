@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    android:padding="25dp"
+    >
+    <TableRow
+        android:layout_marginTop="10dp">
+        <TextView
+            android:text="Address"
+            android:padding="3dip"
+            android:layout_width="130dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/address"
+
+            android:gravity="left"
+            android:padding="3dip"
+            android:layout_width="200dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:id="@+id/phone">
+        <TextView
+            android:text="Phone Number"
+            android:padding="3dip"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:text="999"
+            android:gravity="left"
+            android:padding="3dip"
+            android:autoLink="phone"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:id="@+id/price">
+        <TextView
+            android:text="Price Level"
+            android:padding="3dip"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/priceLevel"
+            android:text="999"
+            android:gravity="left"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:id="@+id/rate">
+        <TextView
+            android:text="Rating"
+            android:padding="3dip"
+            android:textStyle="bold"/>
+        <!--<TextView-->
+            <!--android:id="@+id/rating"-->
+            <!--android:text="999"-->
+            <!--android:gravity="left"-->
+            <!--android:padding="3dip" />-->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:numStars="5"
+
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:stepSize="0.01"
+            android:transformPivotX="0dp"
+            android:transformPivotY="8dp"
+            android:isIndicator="true"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:id="@+id/google">
+        <TextView
+            android:text="Google Page"
+            android:padding="3dip"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/googlePage"
+            android:text="999"
+            android:gravity="left"
+            android:padding="3dip"
+            android:layout_width="200dp"
+            android:autoLink="all"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:id="@+id/webpage">
+        <TextView
+            android:text="Website"
+            android:padding="3dip"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/website"
+            android:text="999"
+            android:gravity="left"
+            android:padding="3dip"
+            android:autoLink="all"
+            android:layout_width="200dp"/>
+    </TableRow>
+</TableLayout>

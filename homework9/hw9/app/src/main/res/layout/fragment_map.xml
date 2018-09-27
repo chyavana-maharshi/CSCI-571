@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Fragments.MapFragment">
+
+
+    <TextView
+        android:id="@+id/mapFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="From"
+        android:textAlignment="center"
+        android:textSize="15dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/mapText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mapFrom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:inputType="text"
+        android:theme="@style/EditText"
+        android:hint="Type in the location"/>
+
+    <Spinner
+        android:id="@+id/mapSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mapText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+    </Spinner>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_below="@id/mapSpinner"
+        android:layout_marginTop="20dp"
+        tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+</RelativeLayout>

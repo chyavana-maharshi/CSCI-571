@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/singleRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/pImg"
+            android:scaleType="fitXY"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:id="@+id/pName"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/pImg"
+            android:layout_toRightOf="@+id/pImg"
+            android:maxLines="2"
+            android:text="Location Name"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/pVicinity"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pName"
+            android:layout_alignStart="@+id/pName"
+            android:layout_below="@+id/pName"
+            android:maxLines="2"
+            android:text="Location Vicinity"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/pFav"
+            android:scaleType="fitXY"
+            android:layout_toRightOf="@id/pName"
+            android:src="@drawable/heart_outline_black"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/singleRow"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f2f2f2" />
+
+</RelativeLayout>

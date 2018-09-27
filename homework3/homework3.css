@@ -1,0 +1,225 @@
+html{
+    width: 1180px;
+    font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell","Fira Sans", "Helvetica Neue",sans-serif;
+}
+body{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.scrollpt1{
+    background-color: white;
+    
+}
+p{
+    font-size: 0.97em;
+    font-weight: 300;
+}
+p.part2{
+    margin-top: 1%;
+    margin-bottom: 0%;
+    float: right;
+    
+}
+p.part1{
+    margin-bottom: 6%;
+}
+.header_nav {
+    font-family: Arial, sans-serif;
+    text-align: center; 
+    border-top-style: solid;
+    border-top-color: lightgrey;
+    border-top-width: thin;
+}
+.header_nav ul{
+    list-style: none;
+    margin: 1em;
+    padding:0;
+    display: inline;
+}
+.header_nav li{  
+    justify-content: center;
+    display: inline-flex;
+    margin: 1em;
+    margin-right: 4.5em;
+    margin-left: 4.5em;
+    margin-bottom: 1%;
+    margin-top: 1.5%;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.link1{
+    text-decoration: none;
+    color: rgb(188,155,93);
+    
+}
+.link2{
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+}
+.link2:hover{
+    transition: 0.3s;
+    color: lightgrey;
+}
+.l2{
+    font-family: Times New Roman, serif;
+    font-size: 1.8em;
+    font-weight: bolder;
+    float: left；
+    
+}
+h1{
+    margin-left: 12%;
+    margin-top: 2%;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+h2{
+    color: rgb(188,155,93);
+    font: 3.5em Arial;
+    text-align: center;
+    margin-top: -2%;
+    margin-bottom: 4.5%;
+}
+h3.part1{
+    font-size: 70%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    letter-spacing: 2px;
+}
+h3{
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 70%;
+    margin-top: 0%;
+    margin-bottom: 1%;
+    letter-spacing: 1px;
+    
+}
+h4{
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    color: rgb(188,155,93);
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom:1%;
+}
+h4.part1{
+    margin-top: -1%;
+    margin-bottom: 1%;    
+}
+.love{
+    text-align: center;
+    margin-bottom: 8%
+}
+h5{
+    font-family:sans-serif;
+    font-weight: 400;
+    font-size: 0.8em;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 6%;
+    margin-bottom: -3%
+}
+.order_online{
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5em;
+    color: black;
+}
+.order_online:hover{
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5em;
+    color:lightgrey;
+    
+}
+.order{
+    margin-top: -32%;
+    margin-bottom: %;
+    text-align: center;
+    position: absolute;
+    left: 34%;
+    right: 34%;
+    background-color: white;
+    padding: 45px 35px 45px 35px;
+}
+
+
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.img1{
+    float: left;
+    width: 48%;
+    margin-top: 11%;
+    margin-bottom: 0;
+}
+.part1{
+    float: right;
+    width: 48%;
+    
+}
+.img2{
+    float: right;
+    width: 48%;
+    margin-top: 4%;
+}
+.img3{
+    float: left;
+    width: 48%;
+    margin-top: 5%;
+    margin-bottom: 9%;
+}
+.img4{
+    float: right;
+    width: 48%;
+    margin-top: 5%;
+}
+.part2{
+    float: left;
+    width: 48%;
+}
+.img5{
+    width: 100%;
+    margin-top: 50px;   
+}
+.parallax{
+    background-image: url(http://cs-server.usc.edu:45678/hw/hw3/images/image6.jpg);
+    height: 610px;
+    background-attachment: fixed;
+    background-position: -350px 40px;
+    background-repeat: no-repeat;
+    background-size: 160%;
+}
+.parallax2{
+    background-image: url(http://cs-server.usc.edu:45678/hw/hw3/images/image5.jpg);
+    height: 470px;
+    background-attachment: fixed;
+    background-position: 0px -170px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.8;
+}
+footer{
+    background-color:rgb(188,155,93);
+    padding-bottom: 130px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;   
+}
+.footer{
+    color:white;
+    margin-left: 750px;
+    font-weight: 500;
+    font-size: 0.9em;
+    
+}

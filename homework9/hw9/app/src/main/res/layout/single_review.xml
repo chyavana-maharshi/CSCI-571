@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/singleReviewRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/pReviewPhoto"
+            android:scaleType="fitXY"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:id="@+id/pReviewName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/pReviewPhoto"
+            android:layout_toRightOf="@+id/pReviewPhoto"
+            android:maxLines="2"
+            android:text="Author Name"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <RatingBar
+            android:id="@+id/reviewBar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:numStars="5"
+            android:layout_alignLeft="@+id/pReviewName"
+            android:layout_alignStart="@+id/pReviewName"
+            android:layout_below="@+id/pReviewName"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:stepSize="0.01"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            android:isIndicator="true"/>
+
+        <TextView
+            android:id="@+id/pReviewDate"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pReviewName"
+            android:layout_alignStart="@+id/pReviewName"
+            android:layout_below="@+id/reviewBar"
+            android:maxLines="2"
+            android:text="review date"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/pReviewText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pReviewName"
+            android:layout_alignStart="@+id/pReviewName"
+            android:layout_below="@+id/pReviewDate"
+
+            android:text="review text"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/singleReviewRow"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f2f2f2" />
+
+</RelativeLayout>

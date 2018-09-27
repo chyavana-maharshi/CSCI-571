@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+     <title>Boeing Aircraft Families</title>
+     <aircraft> 
+	<Boeing>Boeing 717</Boeing>
+        <Image>http://cs-server.usc.edu:45678/examples/dom/aircraft/717.jpg</Image>
+        <Aircraft>717-200 </Aircraft> 
+	<seats>106</seats>
+	<Range>3815km </Range>
+        <Wingspan>28.4m</Wingspan> 
+	<Length>37.8m</Length>
+        <height>8.9m</height>
+     </aircraft>
+     <aircraft> 
+	<Boeing>Boeing 737</Boeing>
+<Image>http://cs-server.usc.edu:45678/examples/dom/aircraft/737.jpg</Image>
+	<Aircraft>737-900</Aircraft> 
+	<seats>189</seats>
+	<Range>5084km</Range>
+	<Wingspan>34.3m</Wingspan> 
+	<Length>42.1m</Length>
+      <height>12.5m</height>
+	
+     </aircraft>
+     <aircraft> 
+	<Boeing>Boeing 747</Boeing>
+<Image>http://cs-server.usc.edu:45678/examples/dom/aircraft/747.jpg</Image>
+	<Aircraft>747-400</Aircraft> 
+	<seats>524</seats>
+	<Range>13450km</Range>
+	<Wingspan>64.4m</Wingspan> 
+	<Length>70.7m</Length>
+      <height>19.4m</height>
+	
+     </aircraft>
+     <aircraft> 
+	<Boeing>Boeing 757</Boeing>
+	<Image>http://cs-server.usc.edu:45678/examples/dom/aircraft/757.jpg</Image>
+	<Aircraft>757-300</Aircraft> 
+	<seats>280</seats>
+	<Range>6287km</Range>
+	<Wingspan>38.05m</Wingspan> 
+	<Length>54.5m</Length>
+      <height>13.6m</height>
+
+     </aircraft>
+
+     <aircraft> 
+	<Boeing>Boeing 767</Boeing>
+	<Image>http://cs-server.usc.edu:45678/examples/dom/aircraft/767.jpg</Image>
+	<Aircraft>767-400</Aircraft> 
+	<seats>375</seats>
+	<Range>10454km</Range>
+	<Wingspan>51.9m</Wingspan> 
+	<Length>61.4m</Length>
+      <height>16.8m</height>
+
+     </aircraft>
+
+
+     <aircraft> 
+	<Boeing>Boeing 777</Boeing>
+	<Image>http://cs-server.usc.edu:45678/examples/dom/aircraft/777.jpg</Image>
+	<Aircraft>777-300</Aircraft> 
+	<seats>451</seats>
+	<Range>11029km</Range>
+	<Wingspan>60.9m</Wingspan> 
+	<Length>73.9m</Length>
+      <height>18.5m</height>
+
+     </aircraft>
+</catalog>
